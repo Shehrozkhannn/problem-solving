@@ -1,7 +1,7 @@
 
 // FIND THE FREQUENCY OF ELEMENTS IN ARRAY
 // ---------------------------------------
-let arr = ['hello', 'world', 'java', 'hello','java','java'];
+// let arr = ['hello', 'world', 'java', 'hello','java','java'];
 // let overallObj = {};
 
 // arr.forEach((val)=> {
@@ -15,19 +15,19 @@ let arr = ['hello', 'world', 'java', 'hello','java','java'];
 
 // METHOD NO 2 WITH REDUCE 
 
-function countWord(words) {
-    let result = words.reduce((allNames,name)=> {
-      if(name in allNames){
-        allNames[name]++
-      } else {
-        allNames[name] = 1
-      }
-      return allNames
-    },{});
+// function countWord(words) {
+//     let result = words.reduce((allNames,name)=> {
+//       if(name in allNames){
+//         allNames[name]++
+//       } else {
+//         allNames[name] = 1
+//       }
+//       return allNames
+//     },{});
 
-    return result;
-}
+//     return result;
+// }
 
-console.log(countWord(arr))
+// console.log(countWord(arr))
 
 
