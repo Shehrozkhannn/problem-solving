@@ -142,5 +142,31 @@ let overallArr = [];
 //   return sum;
 // }
 
-console.log(twoSum(arr,9));
+// console.log(twoSum(arr,9));
 //OUTPUT [[6,3],[7,2],[8,1]]
+
+
+// FIND THE LEAST PRICE ITEM OF ARRAY 
+// ---------------------------------------------------------------------------------------------
+
+// let details = [
+//   {name: 'pizza', price: 500},
+//   {name: 'icecream', price: 200},
+//   {name: 'beef burger', price: 300},
+//   {name: 'mexican sandwich', price: 800},
+//   {name: 'butterchicken', price: 302},
+//   {name: 'large pizza', price: 50},
+// ];
+
+// let leastValue = details.reduce((minItem,currentItem)=>{
+//   return currentItem.price < minItem.price ? currentItem : minItem
+// })
+
+// console.log(leastValue);
+
+// let numbers = [10,20,40,11,33,100];
+
+// const smallNumber = numbers.reduce((storedMin,val)=> {
+//   return val > storedMin ? val : storedMin
+// })
+// console.log(smallNumber);
