@@ -14,17 +14,28 @@
 
 //SECOND WAY
 
-const twoSum = (nums, target) => {
-  return nums.map((num, i) => {
-    const complementIndex = nums.find((n, j) => j > i && n === target - num);
+// const twoSum = (nums, target) => {
+//   return nums.map((num, i) => {
+//     const complementIndex = nums.find((n, j) => j > i && n === target - num);
 
-    if (complementIndex !== undefined) {
-      return [i, nums.indexOf(complementIndex)];
-    }
-  }).filter(Boolean)[0];  // Remove undefined entries and return the first match
-};
+//     if (complementIndex !== undefined) {
+//       return [i, nums.indexOf(complementIndex)];
+//     }
+//   }).filter(Boolean)[0];  // Remove undefined entries and return the first match
+// };
 
-// Example usage:
-const nums = [2, 7, 11, 15];
-const target = 9;
-console.log(twoSum(nums, target)); 
+// // Example usage:
+// const nums = [2, 7, 11, 15];
+// const target = 9;
+// console.log(twoSum(nums, target)); 
+
+
+// REVERESE STRING
+// ---------------------------------------------------------------------------------------------
+
+function reverseString(str){
+  return str.split('').reverse().join('');
+}
+
+console.log(reverseString('Eisha'));
+
