@@ -33,9 +33,21 @@
 // REVERESE STRING
 // ---------------------------------------------------------------------------------------------
 
-function reverseString(str){
-  return str.split('').reverse().join('');
+// function reverseString(str){
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(reverseString('Eisha'));
+
+//CHECKING FOR PALINDROME
+
+const checkingPalindrome = (str) => {
+    const reverseString = str.toLowerCase().split('').reverse().join('');
+    return reverseString === str.toLowerCase() ? 'Palindrome' : 'Not a palindrome'
 }
 
-console.log(reverseString('Eisha'));
+console.log(checkingPalindrome('Mom'));
+
+
+
 
