@@ -41,12 +41,25 @@
 
 //CHECKING FOR PALINDROME
 
-const checkingPalindrome = (str) => {
-    const reverseString = str.toLowerCase().split('').reverse().join('');
-    return reverseString === str.toLowerCase() ? 'Palindrome' : 'Not a palindrome'
-}
+// const checkingPalindrome = (str) => {
+//     const reverseString = str.toLowerCase().split('').reverse().join('');
+//     return reverseString === str.toLowerCase() ? 'Palindrome' : 'Not a palindrome'
+// }
 
-console.log(checkingPalindrome('Mom'));
+// console.log(checkingPalindrome('Mom'));
+
+//LARGEST NUMMBER FROM THE ARRAY;
+
+const nums = [2, 7, 113, 15,20,8,13];
+
+let maxNumber = nums[0];
+nums.forEach((val)=> {
+    if(val > maxNumber){
+        maxNumber = val
+    }
+})
+console.log(maxNumber);
+
 
 
 
