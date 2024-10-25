@@ -50,14 +50,17 @@
 
 //LARGEST NUMMBER FROM THE ARRAY;
 
-const nums = [2, 7, 113, 15,20,8,13];
+// const nums = [2, 7, 113, 15,20,8,13];
 
-let maxNumber = nums[0];
-nums.forEach((val)=> {
-    if(val > maxNumber){
-        maxNumber = val
-    }
-})
+// let maxNumber = nums[0];
+// nums.forEach((val)=> {
+//     if(val > maxNumber) maxNumber = val
+// })
+// console.log(maxNumber);
+
+// SECOND APPROACH
+const nums = [2, 7, 113, 15, 20, 8, 13];
+let maxNumber = nums.reduce((max, current) => (current > max ? current : max), nums[0]);
 console.log(maxNumber);
 
 
