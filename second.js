@@ -59,10 +59,41 @@
 // console.log(maxNumber);
 
 // SECOND APPROACH
-const nums = [2, 7, 113, 15, 20, 8, 13];
-let maxNumber = nums.reduce((max, current) => (current > max ? current : max), nums[0]);
-console.log(maxNumber);
+// const nums = [2, 7, 113, 15, 20, 8, 13];
+// let maxNumber = nums.reduce((max, current) => (current > max ? current : max), nums[0]);
+// console.log(maxNumber);
 
+// -------------------------Find the First Non-Repeating Character in a String------------------------------
+
+// const nonRepetativeString = (str) => {
+//     let store = {};
+//    return str.split('').forEach((val)=> {
+//     store['key'] = val 
+//    });
+// }
+
+
+// console.log(nonRepetativeString('swiss'));
+
+function firstNonRepeatingCharacter(str) {
+    const charCount = {};
+
+    for (let char of str) {
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    for (let char of str) {
+      if (charCount[char] === 1) {
+        return char;
+      }
+    }
+  
+    return null;
+  }
+  
+  // Example usage:
+  const result = firstNonRepeatingCharacter("swiss");
+  console.log(result);
 
 
 
