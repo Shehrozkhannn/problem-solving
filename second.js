@@ -100,17 +100,44 @@ let container = [5,10,15,20,25];
 let containerTwo = [7,10,18,28,27];
 
 const mergeTwoSortedArray = (arr1 , arr2) => {
-    const mergedArr = [...container , ...containerTwo];
-    console.log(mergedArr);
+    const mergedArr = [...arr1 , ...arr2];
+    // console.log(mergedArr);
     for (let index = 0; index < mergedArr.length; index++) {
-        for (let j = 1; j < mergedArr.length; j++) {
-            if(mergedArr)
-            
+        for (let j = 0; j < mergedArr.length-1; j++) {
+            if(mergedArr[j] > mergedArr[j+1]){
+                let temp = mergedArr[j]
+                mergedArr[j] = mergedArr[j+1]
+                mergedArr[j+1] = temp;
+            }
+            if(mergedArr[j] === mergedArr[j+1]){
+
+            }
         }
     }
+    return mergedArr
 }
 
-console.log(mergeTwoSortedArray(container,containerTwo))
+console.log(mergeTwoSortedArray(container,containerTwo));
+
+
+/// REMOVING DUPLICATES BEST MEETHOD
+// const array = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueArray = array.filter((value, index) => array.indexOf(value) === index);
+// console.log(uniqueArray); 
+
+//ANOTHER METHOD
+// const array = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueArray = [];
+// const seen = {};
+
+// for (let i = 0; i < array.length; i++) {
+//     if (!seen[array[i]]) {
+//         uniqueArray.push(array[i]);
+//         seen[array[i]] = true;
+//     }
+// }
+
+// console.log(uniqueArray); 
 
 
 
