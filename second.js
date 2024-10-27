@@ -75,25 +75,42 @@
 
 // console.log(nonRepetativeString('swiss'));
 
-function firstNonRepeatingCharacter(str) {
-    const charCount = {};
+// function firstNonRepeatingCharacter(str) {
+//     const charCount = {};
 
-    for (let char of str) {
-      charCount[char] = (charCount[char] || 0) + 1;
-    }
+//     for (let char of str) {
+//       charCount[char] = (charCount[char] || 0) + 1;
+//     }
 
-    for (let char of str) {
-      if (charCount[char] === 1) {
-        return char;
-      }
+//     for (let char of str) {
+//       if (charCount[char] === 1) {
+//         return char;
+//       }
+//     }
+  
+//     return null;
+//   }
+  
+//   // Example usage:
+//   const result = firstNonRepeatingCharacter("swiss");
+//   console.log(result);
+
+// -------------------------MERGE TWO SORTED ARRAYS INTO ONE SORTED ARRAY ------------------------------
+let container = [5,10,15,20,25];
+let containerTwo = [7,10,18,28,27];
+
+const mergeTwoSortedArray = (arr1 , arr2) => {
+    const mergedArr = [...container , ...containerTwo];
+    console.log(mergedArr);
+    for (let index = 0; index < mergedArr.length; index++) {
+        for (let j = 1; j < mergedArr.length; j++) {
+            if(mergedArr)
+            
+        }
     }
-  
-    return null;
-  }
-  
-  // Example usage:
-  const result = firstNonRepeatingCharacter("swiss");
-  console.log(result);
+}
+
+console.log(mergeTwoSortedArray(container,containerTwo))
 
 
 
