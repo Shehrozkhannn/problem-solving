@@ -156,16 +156,44 @@
 
 // ANOTHER METHOD
 
-const operators = ['+', '-', '*', '/'];
-const basicCalculator = (num1,num2,operator) => {
-    const index = operators.indexOf(operator)
-    switch (index) {
-        case 0: return num1 + num2
-        case 1: return num1 - num2
-        case 2: return num1 * num2
-        case 3: return num1 / num2
-        default: 'Invalid operator';
-    }
-}
+// const operators = ['+', '-', '*', '/'];
+// const basicCalculator = (num1,num2,operator) => {
+//     const index = operators.indexOf(operator)
+//     switch (index) {
+//         case 0: return num1 + num2
+//         case 1: return num1 - num2
+//         case 2: return num1 * num2
+//         case 3: return num1 / num2
+//         default: 'Invalid operator';
+//     }
+// }
+
+// ----------------------- * Create a function that counts the number of vowels in a given string. -------
 
 
+// const countVowels = (str) => {
+//     let vowelsCount = 0;
+//     const vowels = ['a','e','i','o','u'];
+//     str.toLowerCase().split('').forEach((val)=> {
+//         if(vowels.includes(val)){
+//             vowelsCount++;
+//         }
+//     })
+//     return vowelsCount
+// }
+
+// console.log(countVowels('banana'));
+
+//SECOND METHOD
+
+function countVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    return str
+      .toLowerCase()
+      .split('')
+      .filter(char => vowels.includes(char)).length;
+  }
+  
+  // Example usage
+  const result = countVowels("Hello World");
+  console.log(result);
