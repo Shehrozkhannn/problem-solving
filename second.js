@@ -96,28 +96,28 @@
 //   console.log(result);
 
 // -------------------------MERGE TWO SORTED ARRAYS INTO ONE SORTED ARRAY ------------------------------
-let container = [5,10,15,20,25];
-let containerTwo = [7,10,18,28,27];
+// let container = [5,10,15,20,25];
+// let containerTwo = [7,10,18,28,27];
 
-const mergeTwoSortedArray = (arr1 , arr2) => {
-    const mergedArr = [...arr1 , ...arr2];
-    // console.log(mergedArr);
-    for (let index = 0; index < mergedArr.length; index++) {
-        for (let j = 0; j < mergedArr.length-1; j++) {
-            if(mergedArr[j] > mergedArr[j+1]){
-                let temp = mergedArr[j]
-                mergedArr[j] = mergedArr[j+1]
-                mergedArr[j+1] = temp;
-            }
-            if(mergedArr[j] === mergedArr[j+1]){
+// const mergeTwoSortedArray = (arr1 , arr2) => {
+//     const mergedArr = [...arr1 , ...arr2];
+//     // console.log(mergedArr);
+//     for (let index = 0; index < mergedArr.length; index++) {
+//         for (let j = 0; j < mergedArr.length-1; j++) {
+//             if(mergedArr[j] > mergedArr[j+1]){
+//                 let temp = mergedArr[j]
+//                 mergedArr[j] = mergedArr[j+1]
+//                 mergedArr[j+1] = temp;
+//             }
+//             if(mergedArr[j] === mergedArr[j+1]){
 
-            }
-        }
-    }
-    return mergedArr
-}
+//             }
+//         }
+//     }
+//     return mergedArr
+// }
 
-console.log(mergeTwoSortedArray(container,containerTwo));
+// console.log(mergeTwoSortedArray(container,containerTwo));
 
 
 /// REMOVING DUPLICATES BEST MEETHOD
@@ -140,5 +140,32 @@ console.log(mergeTwoSortedArray(container,containerTwo));
 // console.log(uniqueArray); 
 
 
+
+
+//BASIC CALCULATOR
+
+// const basicCalculator = (num1, num2, operator) => {
+//     if (operator === '+') return num1 + num2;
+//     else if (operator === '-') return num1 - num2;
+//     else if (operator === '*') return num1 * num2;
+//     else if (operator === '/') return num1 / num2;
+//     else return "Invalid operator";
+    
+// };
+// console.log(basicCalculator(0, 0, '+')); 
+
+// ANOTHER METHOD
+
+const operators = ['+', '-', '*', '/'];
+const basicCalculator = (num1,num2,operator) => {
+    const index = operators.indexOf(operator)
+    switch (index) {
+        case 0: return num1 + num2
+        case 1: return num1 - num2
+        case 2: return num1 * num2
+        case 3: return num1 / num2
+        default: 'Invalid operator';
+    }
+}
 
 
