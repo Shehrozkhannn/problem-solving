@@ -186,14 +186,32 @@
 
 //SECOND METHOD
 
-function countVowels(str) {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
-    return str
-      .toLowerCase()
-      .split('')
-      .filter(char => vowels.includes(char)).length;
-  }
+// function countVowels(str) {
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     return str
+//       .toLowerCase()
+//       .split('')
+//       .filter(char => vowels.includes(char)).length;
+//   }
   
-  // Example usage
-  const result = countVowels("Hello World");
-  console.log(result);
+//   // Example usage
+//   const result = countVowels("Hello World");
+//   console.log(result);
+
+
+// ----------------------- *Return common elements from two arrays. -------------------------------------
+
+const returnCommonElements = (arr1, arr2) => {
+    const mergedArr = [...arr1 , ...arr2];
+    return mergedArr.filter((val,index)=> index !== mergedArr.indexOf(val));
+}
+console.log(returnCommonElements([1,25,10,20,3],[3,10,13,25,19,1]));
+
+
+
+//Flatten a Nested Array Implement a function that flattens a deeply nested array (e.g., [1, [2, [3, 4]], 5] → [1, 2, 3, 4, 5]).
+
+const nestedArray = [1, [2, [3, 4]], 5];
+const flattenedArray = nestedArray.flat(Infinity);
+
+console.log(flattenedArray);
