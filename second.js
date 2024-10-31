@@ -221,11 +221,28 @@
 // * Write a function to determine if two strings are anagrams (e.g., "listen" and "silent").
 
 
-const checkForAnagrams = (str1, str2) => {
-    const sortedStr1 = str1.split('').sort().join('');
-    const sortedStr2 = str2.split('').sort().join('');
-    return sortedStr1 === sortedStr2 ? 'ANAGRAM' : 'Not Anagram';
-};
+// const checkForAnagrams = (str1, str2) => {
+//     const sortedStr1 = str1.split('').sort().join('');
+//     const sortedStr2 = str2.split('').sort().join('');
+//     return sortedStr1 === sortedStr2 ? 'ANAGRAM' : 'Not Anagram';
+// };
 
-console.log(checkForAnagrams('listen', 'silent'));
-console.log(checkForAnagrams('hello', 'world')); 
+// console.log(checkForAnagrams('listen', 'silent'));
+// console.log(checkForAnagrams('hello', 'world')); 
+
+
+// Sum of All Numbers in an Array
+// * Create a function to return the sum of all numbers in a given array.
+
+
+let container = [1,0,1,2,5];
+
+// const sumOfAllNumbers = (arr) => {
+//     // let sum = 0;
+//     // arr.forEach((val)=> sum += val)
+//     // return sum
+
+//     return arr.reduce((acc,curr)=>acc + curr ,0)
+// }
+
+// console.log(sumOfAllNumbers(container));
