@@ -201,17 +201,31 @@
 
 // ----------------------- *Return common elements from two arrays. -------------------------------------
 
-const returnCommonElements = (arr1, arr2) => {
-    const mergedArr = [...arr1 , ...arr2];
-    return mergedArr.filter((val,index)=> index !== mergedArr.indexOf(val));
-}
-console.log(returnCommonElements([1,25,10,20,3],[3,10,13,25,19,1]));
+// const returnCommonElements = (arr1, arr2) => {
+//     const mergedArr = [...arr1 , ...arr2];
+//     return mergedArr.filter((val,index)=> index !== mergedArr.indexOf(val));
+// }
+// console.log(returnCommonElements([1,25,10,20,3],[3,10,13,25,19,1]));
 
 
 
 //Flatten a Nested Array Implement a function that flattens a deeply nested array (e.g., [1, [2, [3, 4]], 5] → [1, 2, 3, 4, 5]).
 
-const nestedArray = [1, [2, [3, 4]], 5];
-const flattenedArray = nestedArray.flat(Infinity);
+// const nestedArray = [1, [2, [3, 4]], 5];
+// const flattenedArray = nestedArray.flat(Infinity);
 
-console.log(flattenedArray);
+// console.log(flattenedArray);
+
+
+// Check for Anagrams
+// * Write a function to determine if two strings are anagrams (e.g., "listen" and "silent").
+
+
+const checkForAnagrams = (str1, str2) => {
+    const sortedStr1 = str1.split('').sort().join('');
+    const sortedStr2 = str2.split('').sort().join('');
+    return sortedStr1 === sortedStr2 ? 'ANAGRAM' : 'Not Anagram';
+};
+
+console.log(checkForAnagrams('listen', 'silent'));
+console.log(checkForAnagrams('hello', 'world')); 
