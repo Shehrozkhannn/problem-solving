@@ -235,7 +235,7 @@
 // * Create a function to return the sum of all numbers in a given array.
 
 
-let container = [1,0,1,2,5];
+// let container = [1,0,1,2,5];
 
 // const sumOfAllNumbers = (arr) => {
 //     // let sum = 0;
@@ -246,3 +246,12 @@ let container = [1,0,1,2,5];
 // }
 
 // console.log(sumOfAllNumbers(container));
+
+
+//FUNCTION TO CHECK PRIMARY NUMBER --------------------------------->>>
+
+const checkPrimeNumber = (num) => {
+    return num % 2 === 0 ? 'Prime' : 'Not prime'
+}
+
+console.log(checkPrimeNumber(2))
