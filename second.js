@@ -250,8 +250,41 @@
 
 //FUNCTION TO CHECK PRIMARY NUMBER --------------------------------->>>
 
-const checkPrimeNumber = (num) => {
-    return num % 2 === 0 ? 'Prime' : 'Not prime'
+// const checkPrimeNumber = (num) => {
+//     return num % 2 === 0 ? 'Prime' : 'Not prime'
+// }
+
+// console.log(checkPrimeNumber(2))
+
+
+// PERFOM BINARY SEARCH TO FINDOUT THE TARGET NUMBER ------------------------------------------>>>>
+
+let arr = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91];
+const target = 23;
+
+let low = 0;
+let high = arr.length - 1;
+
+while (low <= high) {
+    // Calculate the middle index
+    let middle = Math.floor((low + high) / 2);
+    
+    // Check if the target is at the middle
+    if (arr[middle] === target) {
+        console.log("Target found at index:", middle);
+        break;
+    }
+    // If target is greater, ignore the left half
+    else if (arr[middle] < target) {
+        low = middle + 1;
+    }
+    // If target is smaller, ignore the right half
+    else {
+        high = middle - 1;
+    }
 }
 
-console.log(checkPrimeNumber(2))
+// If the loop ends and target isn't found
+if (low > high) {
+    console.log("Target not found in the array.");
+}
