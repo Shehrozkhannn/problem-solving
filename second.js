@@ -288,42 +288,42 @@
 // }
 
 ////// convert roman numbers to normal numbers
-function romanToInteger(roman) {
-    // Define the Roman numeral values
-    const romanValues = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
-    };
+// function romanToInteger(roman) {
+//     // Define the Roman numeral values
+//     const romanValues = {
+//         'I': 1,
+//         'V': 5,
+//         'X': 10,
+//         'L': 50,
+//         'C': 100,
+//         'D': 500,
+//         'M': 1000
+//     };
 
-    let total = 0;
-    let prevValue = 0;
+//     let total = 0;
+//     let prevValue = 0;
 
-    // Process each character in reverse order
-    for (let i = roman.length - 1; i >= 0; i--) {
-        const char = roman[i];
-        const value = romanValues[char];
+//     // Process each character in reverse order
+//     for (let i = roman.length - 1; i >= 0; i--) {
+//         const char = roman[i];
+//         const value = romanValues[char];
 
-        // Apply subtractive rule if necessary
-        if (value < prevValue) {
-            total -= value;
-        } else {
-            total += value;
-        }
+//         // Apply subtractive rule if necessary
+//         if (value < prevValue) {
+//             total -= value;
+//         } else {
+//             total += value;
+//         }
 
-        // Update the previous value
-        prevValue = value;
-    }
+//         // Update the previous value
+//         prevValue = value;
+//     }
 
-    return total;
-}
+//     return total;
+// }
 
-// Example Usage
-console.log(romanToInteger("IV"));    // Output: 4
-console.log(romanToInteger("IX"));    // Output: 9
-console.log(romanToInteger("LVIII")); // Output: 58
-console.log(romanToInteger("MCMXCIV")); 
+// // Example Usage
+// console.log(romanToInteger("IV"));    // Output: 4
+// console.log(romanToInteger("IX"));    // Output: 9
+// console.log(romanToInteger("LVIII")); // Output: 58
+// console.log(romanToInteger("MCMXCIV")); 
