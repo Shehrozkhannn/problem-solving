@@ -327,3 +327,17 @@
 // console.log(romanToInteger("IX"));    // Output: 9
 // console.log(romanToInteger("LVIII")); // Output: 58
 // console.log(romanToInteger("MCMXCIV")); 
+
+
+//debounce time delay function
+// function debounce(func, delay) {
+//   let timeoutId; // This will hold our timer ID.
+
+//   return function(...args) { // This is the function that gets returned and called instead of `func`.
+//     clearTimeout(timeoutId); // Step 1: Stop the previous timer if there was any.
+    
+//     timeoutId = setTimeout(() => { // Step 2: Start a new timer.
+//       func.apply(this, args); // Step 3: When the timer ends, call `func`.
+//     }, delay); // The timer will run after `delay` milliseconds.
+//   };
+// }
