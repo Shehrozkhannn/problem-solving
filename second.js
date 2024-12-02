@@ -120,10 +120,10 @@
 // console.log(mergeTwoSortedArray(container,containerTwo));
 
 
-/// REMOVING DUPLICATES BEST MEETHOD
-// const array = [1, 2, 2, 3, 4, 4, 5];
-// const uniqueArray = array.filter((value, index) => array.indexOf(value) === index);
-// console.log(uniqueArray); 
+// / REMOVING DUPLICATES BEST MEETHOD
+const array = [1, 2, 2, 3, 4, 4, 5];
+const uniqueArray = array.filter((value, index) => array.indexOf(value) === index);
+console.log(uniqueArray); 
 
 //ANOTHER METHOD
 // const array = [1, 2, 2, 3, 4, 4, 5];
