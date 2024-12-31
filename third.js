@@ -37,11 +37,56 @@
 
 
 // FIND MIDDLE ELEMENT FROM AN ARRAY
-function findMedian(arr) {
-    const sortedArr = arr.sort((a,b)=> a-b);
-    console.log(sortedArr)
-    var middle = sortedArr[Math.floor(sortedArr.length / 2)];
-    console.log(middle)
-}
+// function findMedian(arr) {
+//     const sortedArr = arr.sort((a,b)=> a-b);
+//     console.log(sortedArr)
+//     var middle = sortedArr[Math.floor(sortedArr.length / 2)];
+//     console.log(middle)
+// }
 
-console.log(findMedian([1,10,3,6,2]))
+// console.log(findMedian([1,10,3,6,2]))
+
+
+///////////////////////////////////FINDING LONELY INTEGER HACKER RANK ////////////////////////////////////////////////
+
+// function lonelyinteger(a) {
+//     let checkValues = {};
+//     for (let i = 0; i < a.length; i++) {
+//         if(checkValues[a[i]]){
+//             checkValues[a[i]]++;
+//         }else{
+//             checkValues[a[i]] = 1;
+//         }
+        
+//     }
+//     for (const value in checkValues) {
+//         if(checkValues[value] === 1){
+//             return value
+//         }
+//     }
+//    return null
+// }
+// console.log(lonelyinteger([1,2,3,4,3,2,1]))
+
+//SECOND METHOD USING XOR
+
+// const lonelyinteger = (a) => {
+//     return a.reduce((acc,val)=> acc ^ val,0)
+// }
+// console.log(lonelyinteger([1,2,3,4,3,2,1]))
+
+
+// THIRD METHOD FOR FINDING LONELY INTEGER FROM AN ARRAY ///
+
+const lonelyinteger = (a) => {
+    const checkValues = new Map();
+    for (const element of a) {
+        checkValues.set(element , (checkValues.get(element) || 0) + 1)
+    }
+    for(let [key,value] of checkValues){
+        if(value === 1){
+            return key
+        }
+    }
+}
+console.log(lonelyinteger([1,2,3,4,3,2,1]))
