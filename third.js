@@ -34,3 +34,14 @@
 // }
 
 // console.log(numbersPalindrome(1000))
+
+
+// FIND MIDDLE ELEMENT FROM AN ARRAY
+function findMedian(arr) {
+    const sortedArr = arr.sort((a,b)=> a-b);
+    console.log(sortedArr)
+    var middle = sortedArr[Math.floor(sortedArr.length / 2)];
+    console.log(middle)
+}
+
+console.log(findMedian([1,10,3,6,2]))
