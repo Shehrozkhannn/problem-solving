@@ -78,15 +78,15 @@
 
 // THIRD METHOD FOR FINDING LONELY INTEGER FROM AN ARRAY ///
 
-const lonelyinteger = (a) => {
-    const checkValues = new Map();
-    for (const element of a) {
-        checkValues.set(element , (checkValues.get(element) || 0) + 1)
-    }
-    for(let [key,value] of checkValues){
-        if(value === 1){
-            return key
-        }
-    }
-}
-console.log(lonelyinteger([1,2,3,4,3,2,1]))
+// const lonelyinteger = (a) => {
+//     const checkValues = new Map();
+//     for (const element of a) {
+//         checkValues.set(element , (checkValues.get(element) || 0) + 1)
+//     }
+//     for(let [key,value] of checkValues){
+//         if(value === 1){
+//             return key
+//         }
+//     }
+// }
+// console.log(lonelyinteger([1,2,3,4,3,2,1]))
