@@ -23,12 +23,33 @@
 
 ////////////////////////////// MINIMAX PROBLEM ///////////////////////////////////////////////////////////
 
-function miniMaxSum(arr) {
-    const sortedArray = arr.sort((a,b)=> a-b);
-    const minSum = sortedArray.slice(0,arr.length-1).reduce((acc,val)=> acc + val,0);
-    const maxSum = sortedArray.slice(1,arr.length).reduce((acc,val)=> acc + val,0);
-    console.log(minSum, maxSum)
+// function miniMaxSum(arr) {
+//     const sortedArray = arr.sort((a,b)=> a-b);
+//     const minSum = sortedArray.slice(0,arr.length-1).reduce((acc,val)=> acc + val,0);
+//     const maxSum = sortedArray.slice(1,arr.length).reduce((acc,val)=> acc + val,0);
+//     console.log(minSum, maxSum)
+// }
+
+// miniMaxSum([1,3,5,7,9])
+
+
+
+
+////// FIND LONELY INTEGER HACKER RANK
+
+
+let a = [1,2,3,4,3,2,1];
+let store = {};
+a.forEach((val)=>{
+    if(store[val]){
+        store[val]++
+    }else{
+        store[val] = 1
+    }
+})
+for (let key in store) {
+    if (store[key] === 1) {
+        console.log("Lonely integer:", Number(key));
+    }
 }
-
-miniMaxSum([1,3,5,7,9])
-
+console.log(store);
