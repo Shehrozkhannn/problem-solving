@@ -38,18 +38,41 @@
 ////// FIND LONELY INTEGER HACKER RANK
 
 
-let a = [1,2,3,4,3,2,1];
-let store = {};
-a.forEach((val)=>{
-    if(store[val]){
-        store[val]++
-    }else{
-        store[val] = 1
+// let a = [1,2,3,4,3,2,1];
+// let store = {};
+// a.forEach((val)=>{
+//     if(store[val]){
+//         store[val]++
+//     }else{
+//         store[val] = 1
+//     }
+// })
+// for (let key in store) {
+//     if (store[key] === 1) {
+//         console.log("Lonely integer:", Number(key));
+//     }
+// }
+// console.log(store);
+
+
+///////////// DIAGONAL DIFFERENCE //////////////////////////
+
+function diagonalDifference(arr){
+    let primaryDiagonal = 0;
+    let secondaryDiagonal = 0;
+    let n = arr.length;
+    console.log(n)
+    for (let i = 0; i < n; i++) {
+        primaryDiagonal += arr[i][i];             // same row and column
+        secondaryDiagonal += arr[i][n - 1 - i];    // row, but column from end
     }
-})
-for (let key in store) {
-    if (store[key] === 1) {
-        console.log("Lonely integer:", Number(key));
-    }
+
+    return Math.abs(primaryDiagonal - secondaryDiagonal);
 }
-console.log(store);
+
+let matrix = [
+    [1,2,3],
+    [4,5,6],
+    [9,8,9]
+]
+diagonalDifference(matrix)
