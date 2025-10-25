@@ -38,18 +38,54 @@
 // Remove duplicates from sorted array
 
 
-var removeDuplicates = function(nums) {
-  if (nums.length === 0) return 0;
+// var removeDuplicates = function(nums) {
+//   if (nums.length === 0) return 0;
 
-  let k = 1; // pointer for the next unique position
-  for (let i = 1; i < nums.length; i++) {
-    if (nums[i] !== nums[i - 1]) {
-      nums[k] = nums[i];
-      k++;
+//   let k = 1; // pointer for the next unique position
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       nums[k] = nums[i];
+//       k++;
+//     }
+//   }
+
+//   return k;
+// };
+
+// console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+
+
+// var removeDuplicates = function(nums) {
+//   if (nums.length === 0) return 0;
+
+//   let k = 1; // pointer for the next unique position
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1] || nums[i] !== nums[i + 1]) {
+//       nums[k] = nums[i];
+//       k++;
+//     }
+//   }
+
+//   return k;
+// };
+
+// console.log(removeDuplicates([1,1,1,2,2,3]))
+
+
+////////// MAJORITY ELEMENT LEETCODE ///////////////
+
+var majorityElement = function(nums) {
+    const obj = {};
+    nums.forEach(element => {
+        obj[element] = (obj[element] || 0) + 1
+    });
+    let majority = nums[0];
+    for(let num in obj){
+        if(obj[num] > obj[majority]){
+            majority = num
+        }
     }
-  }
-
-  return k;
+    return majority
 };
 
-console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+console.log(majorityElement([3,2,3,2,2]))
