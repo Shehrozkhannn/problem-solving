@@ -74,18 +74,34 @@
 
 ////////// MAJORITY ELEMENT LEETCODE ///////////////
 
-var majorityElement = function(nums) {
-    const obj = {};
-    nums.forEach(element => {
-        obj[element] = (obj[element] || 0) + 1
-    });
-    let majority = nums[0];
-    for(let num in obj){
-        if(obj[num] > obj[majority]){
-            majority = num
-        }
-    }
-    return majority
-};
+// var majorityElement = function(nums) {
+//     const obj = {};
+//     nums.forEach(element => {
+//         obj[element] = (obj[element] || 0) + 1
+//     });
+//     let majority = nums[0];
+//     for(let num in obj){
+//         if(obj[num] > obj[majority]){
+//             majority = num
+//         }
+//     }
+//     return majority
+// };
 
-console.log(majorityElement([3,2,3,2,2]))
+// console.log(majorityElement([3,2,3,2,2]))
+
+
+// second method for the same above majority problem  
+
+let marjorityElement = (nums) => {
+    let count = 0;
+    let candidate = null;
+
+    for(let element of nums){
+        if(count === 0) candidate = element;
+        count += (element === candidate) ? 1 : -1;
+    }
+    return candidate;
+}
+
+console.log(marjorityElement([3,1,2,5,1,1,5]))
