@@ -92,7 +92,7 @@
 
 
 // second method for the same above majority problem  
-
+// Boyer-Moore Majority Vote Algorithm
 let marjorityElement = (nums) => {
     let count = 0;
     let candidate = null;
