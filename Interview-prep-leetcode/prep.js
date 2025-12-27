@@ -93,15 +93,58 @@
 
 // second method for the same above majority problem  
 // Boyer-Moore Majority Vote Algorithm
-let marjorityElement = (nums) => {
-    let count = 0;
-    let candidate = null;
+// let marjorityElement = (nums) => {
+//     let count = 0;
+//     let candidate = null;
 
-    for(let element of nums){
-        if(count === 0) candidate = element;
-        count += (element === candidate) ? 1 : -1;
-    }
-    return candidate;
+//     for(let element of nums){
+//         if(count === 0) candidate = element;
+//         count += (element === candidate) ? 1 : -1;
+//     }
+//     return candidate;
+// }
+
+// console.log(marjorityElement([3,1,2,5,1,1,5]))
+
+// ----------------------------------Max stocks profit problem-----------------------------------------------
+// var maxProfit = function(prices) {
+//     let lowestNum = prices[0];
+//     prices.forEach(element => {
+//         if(element < lowestNum){
+//             lowestNum = element
+//         }
+//     });
+//     for (let index = lowestNum; index < prices.length; index++) {
+        
+//     }
+//     return lowestNum
+// };
+
+
+// console.log(maxProfit([7,1,5,3,6,4]));
+
+
+
+
+
+
+// --------------------------------  122. Best Time to Buy and Sell Stock II ----------------------------------------------
+
+var maxProfit = function(prices){
+    let minNumber = prices[0];
+    let totalProfit = [];
+    let singleProfit = 0
+
+    prices.forEach(element => {
+        if(element <= minNumber){
+            minNumber = element
+        }else{
+            singleProfit = element - minNumber;
+            totalProfit.push(singleProfit);
+            minNumber = null;
+        }
+    });
+
 }
 
-console.log(marjorityElement([3,1,2,5,1,1,5]))
+console.log(maxProfit([7,1,5,3,6,4]));
